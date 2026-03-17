@@ -1,19 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "dev:backend": "nodemon server.js",
+    "build": "npm run build:frontend",  // ← ADD THIS LINE
     "build:frontend": "cd ../src && npm run build && cd ../backend && rm -rf public && mkdir -p public && cp -r ../src/build/* ./public/",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "mongoose": "^8.5.1"
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.0.1"
   }
 }
