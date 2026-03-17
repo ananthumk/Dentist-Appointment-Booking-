@@ -1,0 +1,17 @@
+{
+  "name": "dentist-appointment",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "src"
+  ],
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev:backend\" \"cd src && npm start\"",
+    "build": "cd src && npm run build && cd ../backend && rmdir /s public && xcopy ..\\src\\build public\\ /E /I",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
