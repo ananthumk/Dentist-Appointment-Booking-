@@ -1,4 +1,4 @@
-# Dentist Appointment Booking System
+# Dentist Appointment Booking
 
 A web app to browse dentists and book appointments. Built with React, Node.js, Express, and MongoDB.
 
