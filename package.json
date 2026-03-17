@@ -1,10 +1,7 @@
 {
   "name": "dentist-appointment",
   "private": true,
-  "workspaces": [
-    "backend",
-    "src"
-  ],
+  "workspaces": ["backend", "src"],
   "scripts": {
     "dev": "concurrently \"cd backend && npm run dev:backend\" \"cd src && npm start\"",
     "build": "cd src && npm run build && cd ../backend && rmdir /s public && xcopy ..\\src\\build public\\ /E /I",
